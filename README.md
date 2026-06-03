@@ -1,19 +1,32 @@
-# Real Estate API
+# 🏠 Real Estate API
 
-Plataforma de listagem de imóveis com filtros por tipo, cidade, faixa de preço, número de quartos e modalidade (venda ou aluguel).
+API imobiliária para imóveis à venda e aluguel com filtros avançados.
 
-## Tecnologias
-Java 17 · Spring Boot 3.2 · Spring Data JPA · MySQL · Maven · Swagger/OpenAPI
+## 📋 Sobre o Projeto
 
-## Funcionalidades
-- Cadastro de imóveis: Casa, Apartamento, Comercial, Terreno, Galpão
-- Modalidade: Venda (SALE) ou Aluguel (RENT)
-- Filtros: cidade, tipo, faixa de preço, número mínimo de quartos
-- CRUD completo com validação
+Backend para plataforma imobiliária. Gerencia imóveis para venda e aluguel com todas as características relevantes (quartos, banheiros, área, localização). Suporta filtros avançados para buscas personalizadas.
 
-## Como Executar
-```bash
-mvn spring-boot:run
-# Acesse: http://localhost:8098/swagger-ui.html
-```
-**Patryck Martins Langsdorff** — Java Back End Developer Junior | [LinkedIn](https://www.linkedin.com/in/patryck-martins-langsdorff)
+## ✨ Funcionalidades
+
+- ✅ Cadastrar imóveis (apartamento, casa, comercial, terreno)
+- ✅ Tipo de anúncio: SALE (venda) ou RENT (aluguel)
+- ✅ Filtrar por cidade
+- ✅ Filtrar por faixa de preço
+- ✅ Filtrar por número mínimo de quartos
+- ✅ Filtrar por tipo de imóvel
+- ✅ Busca por CEP/bairro
+- ✅ Ativar/desativar anúncio
+
+## 🔗 Endpoints
+
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| GET/POST | `/api/properties` | Listar / Cadastrar imóvel |
+| GET | `/api/properties?city=SP&minRooms=2` | Busca com filtros |
+| GET | `/api/properties?type=RENT` | Filtrar por tipo |
+| GET | `/api/properties?minPrice=300000` | Filtrar por preço |
+| GET/PUT/DELETE | `/api/properties/{id}` | Gerenciar imóvel |
+
+## 🛠️ Tecnologias
+
+- Java 17 · Spring Boot 3.2 · MySQL · Maven · Lombok
